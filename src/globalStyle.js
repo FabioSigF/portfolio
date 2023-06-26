@@ -1,9 +1,9 @@
 import styled, { createGlobalStyle, css } from 'styled-components'
 import { IoCheckmarkCircle, IoLogoInstagram, IoLogoWhatsapp, IoMailOutline } from 'react-icons/io5'
-import { FaLinkedinIn } from 'react-icons/fa'
+import { FaGithub, FaLinkedin, FaLinkedinIn } from 'react-icons/fa'
 import { FiGithub } from 'react-icons/fi'
 import { BiBookAlt, BiNetworkChart } from 'react-icons/bi'
-import { HiOutlineDesktopComputer } from 'react-icons/hi';
+import { HiDocumentText, HiOutlineDesktopComputer } from 'react-icons/hi';
 
 
 export const clr = {
@@ -30,12 +30,12 @@ export const fSize = {
   title: '1.2rem',
   titleLg: '1.3rem',
   titleXLg: '1.875rem',
-  xlarge: '4rem'
+  xlarge: '6rem'
 }
 
 export const fFamily = {
-  title: '"Poppins", sans-serif',
-  text: '"Poppins", sans-serif',
+  title: '"Roboto", sans-serif',
+  text: '"Roboto", sans-serif',
 }
 
 export const transition = {
@@ -63,13 +63,16 @@ export const deviceSize = {
 export const iconList = {
   whatsapp: <IoLogoWhatsapp />,
   email: <IoMailOutline />,
-  linkedin: <FaLinkedinIn />,
-  github: < FiGithub />,
+  linkedin: <FaLinkedin/ >,
+  linkedinOut: <FaLinkedinIn />,
+  github: <FaGithub />,
+  githubOut: < FiGithub />,
   instagram: <IoLogoInstagram />,
   check: <IoCheckmarkCircle />,
   network: <BiNetworkChart />,
   computer: <HiOutlineDesktopComputer />,
   book: <BiBookAlt />,
+  document: <HiDocumentText />,
 }
 
 export const SectionTitle = styled.h2 `
@@ -132,6 +135,7 @@ export const GlobalStyle = createGlobalStyle`
 
   a {
     text-decoration: none;
+    color: inherit;
   }
 
   a, 

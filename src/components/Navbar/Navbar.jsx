@@ -5,11 +5,29 @@ import { NavLink } from 'react-router-dom'
 //STYLES
 import { Container, iconList } from '../../globalStyle'
 import { Contact, Nav, Wrapper } from './Navbar.styles'
+import { useEffect } from 'react'
+import { useState } from 'react'
 
 export default function Navbar() {
+
+  const [changeColor, setChangeColor] = useState(false);
+
+  useEffect(() => {
+    function scrollPosition(){
+      if(window.scrollY > 10)
+      {
+        setChangeColor(true);
+      }
+      else
+      {
+        setChangeColor(false);
+      }
+    }
+    window.addEventListener('scroll', scrollPosition);
+  }, []);
   return (
-    <Container>
-      <Wrapper>
+    <Wrapper className={changeColor ? "header_scroll" : ''}>
+      <Container>
         <Logo />
         <Nav>
           <ul>
@@ -50,7 +68,7 @@ export default function Navbar() {
             </li>
           </ul>
         </Contact>
-      </Wrapper>
-    </Container>
+      </Container>
+    </Wrapper>
   )
 }

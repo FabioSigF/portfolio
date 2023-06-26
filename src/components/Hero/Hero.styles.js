@@ -1,20 +1,22 @@
 import styled from "styled-components";
-import { clr, fSize, pseudoElementCfg } from "../../globalStyle";
+import { clr, fSize,  } from "../../globalStyle";
 
-export const Wrapper = styled.section `
-  min-height: calc(100vh - 70px);
+
+//Style
+export const Wrapper = styled.section`
+  min-height: 100vh;
   display: flex;
   align-items: center;
 `
 
-export const Content = styled.div `
+export const Content = styled.div`
   display: flex;
   align-items: center;
   gap: 1rem;
   position: relative;
 `
 
-export const Description = styled.div `
+export const Description = styled.div`
   width: 50%;
   display: flex;
   flex-direction: column;
@@ -23,56 +25,84 @@ export const Description = styled.div `
   align-items: flex-start;
 `
 
-export const Introduction = styled.div `
-  font-size: ${fSize.titleLg};
+export const Introduction = styled.div`
   display: flex;
   flex-direction: column;
   align-items: flex-start;
-  gap: 1rem;
+  gap: .5rem;
   margin-bottom: 1rem;
-  h1 {
-    color: ${clr.titleDark};
-    font-size: ${fSize.xlarge};
-    margin-left: -.2rem;
-  }
-  span {
-    font-size: ${fSize.bodyLarge};
-    color: ${clr.textLight};
-    position: relative;
+  
+  p {
     display: flex;
     align-items: center;
-    width: 100%;
-    &::before {
-      ${pseudoElementCfg}
-      position: relative;
-      width: 30%;
-      height: 2px;
-      border-radius: 5px;
-      background-color: ${clr.textLight};
-      margin-right: 1rem;
-      opacity: .3;
+    gap: .45rem;
+
+    color: ${clr.textLight};
+    font-size: ${fSize.body};
+    font-weight: 500;
+    text-transform: uppercase;
+  }
+`
+
+export const Title = styled.div`
+  position: relative;
+  width: 100%;
+  height: 12rem;
+  
+  h2 {
+    position: absolute;
+    color: ${clr.titleDark};
+    font-size: ${fSize.xlarge};
+    text-transform: uppercase;
+    font-weight: 900;
+    margin-left: -.2rem;
+    
+    &:nth-child(1)
+    {
+      -webkit-text-stroke: 2px ${clr.primary};
+    }
+    &:nth-child(2)
+    {
+      color: ${clr.secondary};
+      -webkit-text-stroke: 4px ${clr.secondary};
+      clip-path: polygon(87% 0, 100% 0%, 100% 100%, 0% 100%);
     }
   }
 `
 
-export const Subtitle = styled.h3 `
-
+export const Header = styled.div`
+  display: flex;
+  align-items: center;
+  gap: 1rem;
 `
 
-export const Text = styled.p `
-  line-height: ${fSize.bodyLarge};
+export const Social = styled.ul`
+  display: flex;
+  align-items: center;
+  gap: .5rem;
 
-  ul
-  {
-    padding-top: 1rem;
-    padding-left: 1.25rem;
-    li {
-      list-style: circle;
-      list-style-type: disc;
+  a {
+    font-size: ${fSize.bodyLarge};
+    color: ${clr.textDark};
+  }
+`
+
+export const Text = styled.div`
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  gap: .5rem;
+  p {
+    font-size: ${fSize.small};
+
+    &:nth-child(2)
+    {
+      padding-right: 3rem;
     }
   }
 `
 
-export const Image = styled.img `
+export const Image = styled.img`
   max-width: 50%;
+  
 `

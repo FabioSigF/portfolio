@@ -1,15 +1,30 @@
 import styled from "styled-components";
 import { clr, pseudoElementCfg } from "../../globalStyle";
 
-export const Wrapper = styled.header `
-  position: relative;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  height: 70px;
+export const Wrapper = styled.header`
+  position: fixed;
+  width: 100%;
+  top: 0;
+  left: 0;
+  right: 0;
+  background-color: transparent;
+  
+  &.header_scroll {
+    background-color: ${clr.bodyBg};
+    box-shadow: 0px 5px 20px -15px rgba(0,0,0,0.2);
+    -webkit-box-shadow: 0px 5px 20px -15px rgba(0,0,0,0.2);
+    -moz-box-shadow: 0px 5px 20px -15px rgba(0,0,0,0.2);
+  }
+  & > div {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 70px;
+  }
+  z-index: 999;
 `
 
-export const Nav = styled.nav `
+export const Nav = styled.nav`
   color: ${clr.text};
   ul {
     display: flex;
@@ -26,7 +41,7 @@ export const Nav = styled.nav `
   }
 `
 
-export const Contact = styled(Nav) `
+export const Contact = styled(Nav)`
   display: flex;
   align-items: center;
   gap: 1rem;
