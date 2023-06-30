@@ -1,13 +1,16 @@
 import React from 'react'
-import imgHero from '../../imgs/hero4.jpg'
+import imgHero from '../../imgs/hero.jpg'
 
 //Style
 import { Container, iconList } from '../../globalStyle'
-import { Content, Description, Header, Image, Introduction, Social, Text, Title, Wrapper } from './Hero.styles'
-import Button from '../Button/Button'
+import { Buttons, Content, Description, Header, Image, Introduction, MouseDown, Social, Subtitle, Text, Title, Wrapper } from './Hero.styles'
+import ButtonMain from '../Buttons/ButtonMain/ButtonMain'
+import TypeIt from 'typeit-react'
+import ButtonLink from '../Buttons/ButtonLink/ButtonLink'
 
 
 export default function Hero() {
+
   return (
     <Wrapper>
       <Container>
@@ -15,44 +18,56 @@ export default function Hero() {
           <Description>
             <Introduction>
               <Header>
-                <p>
-                  Oi, eu sou o<h1>Fábio Signorini</h1>
-                </p>
-                <Social>
-                  <li>
-                    <a href="#!">
-                      {iconList.linkedin}
-                    </a>
-                  </li>
-                  <li>
-                    <a href="#!">
-                      {iconList.github}
-                    </a>
-                  </li>
-                  <li>
-                    <a href="#!">
-                      {iconList.document}
-                    </a>
-                  </li>
-                </Social>
+                <Title>
+                  Fábio Signorini
+                </Title>
+                <Subtitle>
+                  Desenvolvedor
+                  <TypeIt
+                    options={{ loop: true }}
+                    getBeforeInit={(instance) => {
+                      instance
+                        .type("Front End").pause(650).delete(9).pause(500)
+                        .type(" React JS").pause(650).delete(8).pause(500)
+                        .type("JavaScript").pause(650).delete(8).pause(500);
+                      return instance;
+                    }}>
+                  </TypeIt>
+                </Subtitle>
               </Header>
-              <Title>
-                <h2>Front End Developer</h2>
-                <h2>Front End Developer</h2>
-              </Title>
               <Text>
                 <p>
-                  Tenho 22 anos, sou Desenvolvedor FrontEnd. Adoro React JS!
-                </p>
-                <p>Estudo Ciência da Computação na Universidade Federal de Uberlândia</p>
+                  Eu tenho 22 anos, sou apaixonado com Front End e estudo Ciência da Computação na Universidade Federal de Uberlândia.</p>
               </Text>
             </Introduction>
-            <Button to={"#!"}>
-              Contato
-            </Button>
+            <Buttons>
+              <ButtonMain to={"#!"}>
+                Contato {iconList.paperPlane}
+              </ButtonMain>
+              <ButtonLink>
+                Projetos {iconList.book}
+              </ButtonLink>
+            </Buttons>
+            <Social>
+              <ul>
+                <li>
+                  <a href="#!">{iconList.github}</a>
+                </li>
+                <li>
+                  <a href="#!">{iconList.linkedin}</a>
+                </li>
+                <li>
+                  <a href="#!">{iconList.whatsapp}</a>
+                </li>
+                <li>
+                  <a href="#!">{iconList.document}</a>
+                </li>
+              </ul>
+            </Social>
           </Description>
           <Image src={imgHero} alt="Programador" />
         </Content>
+        <MouseDown />
       </Container>
     </Wrapper>
   )

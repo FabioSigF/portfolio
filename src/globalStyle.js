@@ -1,45 +1,39 @@
-import styled, { createGlobalStyle, css } from 'styled-components'
-import { IoCheckmarkCircle, IoLogoInstagram, IoLogoWhatsapp, IoMailOutline } from 'react-icons/io5'
-import { FaGithub, FaLinkedin, FaLinkedinIn } from 'react-icons/fa'
+import styled, { createGlobalStyle } from 'styled-components'
+import { IoCheckmarkCircle, IoLogoInstagram, IoLogoWhatsapp, IoMailOutline, IoPaperPlaneOutline } from 'react-icons/io5'
+import { FaGithub, FaLinkedin, FaLinkedinIn, FaShareSquare } from 'react-icons/fa'
 import { FiGithub } from 'react-icons/fi'
 import { BiBookAlt, BiNetworkChart } from 'react-icons/bi'
 import { HiDocumentText, HiOutlineDesktopComputer } from 'react-icons/hi';
 
 
 export const clr = {
-  primary: '#FFC801',
-  secondary: '#2C444E',
-  title: '##2C444E',
-  titleDark: "#FFC801",
-  text: '#333',
-  textHover : '#FFC801',
-  textLight: 'rgba(0,0,0, .5)',
-  textDark: "#2C444E",
+  primary: '#6244c5',
+  secondary: '#ffc448',
+  textMain: '#12141D',
+  textMainLight: '#5a5a5a',
+  textLight : '#fff',
   darkgray: '#1F2027',
   bodyBg: '#fff',
   bodyBgGray: "#fafafa",
-  borderGray: "#e9e9e9",
-  white: '#fff',
 }
 
 export const fSize = {
   xsmall: '.6rem',
-  small: '.785rem',
+  small: '.875rem',
   body: '1rem',
-  bodyLarge: '1.2rem',
-  title: '1.2rem',
-  titleLg: '1.3rem',
-  titleXLg: '1.875rem',
-  xlarge: '6rem'
+  bodyLarge: '1.25rem',
+  titlesmall: '1.8rem',
+  title: '2.8rem',
+  xlarge: '4rem'
 }
 
 export const fFamily = {
-  title: '"Roboto", sans-serif',
-  text: '"Roboto", sans-serif',
+  title: '"DM Sans", sans-serif',
+  text: '"Inter", sans-serif',
 }
 
 export const transition = {
-  normal: 'all ease 300ms',
+  normal: 'all ease 200ms',
 }
 
 export const pseudoElementCfg = {
@@ -73,24 +67,24 @@ export const iconList = {
   computer: <HiOutlineDesktopComputer />,
   book: <BiBookAlt />,
   document: <HiDocumentText />,
+  paperPlane: <IoPaperPlaneOutline />,
+  share: <FaShareSquare />,
 }
 
 export const SectionTitle = styled.h2 `
-  font-size: ${fSize.body};
-  text-transform: uppercase;
-  color: ${clr.textLight};
-`
-
-export const Header = styled.header `
-  font-size: ${fSize.bodyLarge};
-  display: flex;
-  align-items: center;
-  gap: 2rem;
-  margin-bottom: 2rem;
+  font-size: ${fSize.title};
+  font-weight: 500;
+  color: ${props => props.light ? clr.textLight : clr.textMain};
+  max-width: 300px;
 `
 
 export const padding = {
   section: 'padding-top: 3rem; padding-bottom: 3rem;',
+}
+
+export const borderRadius = {
+  button: "12px",
+  normal: "16px",
 }
 
 export const Container = styled.div`
@@ -123,7 +117,7 @@ export const GlobalStyle = createGlobalStyle`
   body {
     background-color: ${clr.bodyBg};
     box-sizing: border-box;
-    color: ${clr.text};
+    color: ${clr.textMain};
     font-family: ${fFamily.text};
     margin: 0;
     padding: 0;
