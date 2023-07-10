@@ -31,7 +31,7 @@ const projects = [
     description: "Um blog com conteúdo de viagens e aventuras, onde qualquer usuário pode criar uma conta e postar suas experiências.",
     features: ["React JS", "Firebase","Styled Components"],
     githubLink: "https://github.com/FabioSigF/travelblog",
-    liveDemoLink: "https://travelblog-pi.vercel.app/?vercelToolbarCode=TMbCgJ_AanfvVgr",
+    liveDemoLink: "https://travelblog-lyart.vercel.app/?vercelToolbarCode=akk8reYXqAIKsH4",
     image: blog,
     id: 3,
   },
