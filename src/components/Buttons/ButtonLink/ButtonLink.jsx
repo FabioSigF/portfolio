@@ -4,7 +4,8 @@ import { Wrapper } from './ButtonLink.styles'
 export default function ButtonLink({to, onClick, children}) {
   return (
     <Wrapper 
-      to={to}
+      href={to}
+      target='_blank'
       onClick={onClick}
       >
       {children}
