@@ -3,13 +3,13 @@ import { Buttons, Description, Features, Image, Text, Title, Wrapper } from './P
 import ButtonLink from '../Buttons/ButtonLink/ButtonLink'
 import { iconList } from '../../globalStyle'
 
-export default function Project({ image, title, description, features, githubLink, liveDemoLink, id}) {
+export default function Project({ image, title, description, features, githubLink, liveDemoLink, id, icon}) {
   
   return (
     <Wrapper className={id % 2 === 0 && "reverse"}>
       <Image src={image}/>
       <Description>
-        <Title>{title}</Title>
+        <Title>{title}{icon}</Title>
         <Text>{description}</Text>
         <Features>
           {features.map((item, key) => (

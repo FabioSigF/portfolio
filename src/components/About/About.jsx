@@ -1,6 +1,7 @@
 import React from 'react'
-import { Container, iconList, SectionTitle } from '../../globalStyle'
+import { iconList, SectionTitle } from '../../globalStyle'
 import { Description, SkillCard, SkillHeader, SkillsList, Wrapper } from './About.styles'
+import Container from '../../layout/Container/Container'
 
 export default function About() {
   return (

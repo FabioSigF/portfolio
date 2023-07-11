@@ -1,7 +1,8 @@
 import React from 'react'
-import { Buttons, Content, Email, Grid, Medias, Social, Wheel, Wrapper } from './Contact.styles'
-import { Container, iconList } from '../../globalStyle'
-import wheel from '../../imgs/wheel.png'
+import { Content, Email, Grid, Medias, Social, Wheel, Wrapper } from './Contact.styles'
+import { iconList } from '../../globalStyle'
+import Container from '../../layout/Container/Container'
+import wheel from '../../imgs/contact.png'
 import ButtonMain from '../../components/Buttons/ButtonMain/ButtonMain'
 export default function Contact() {
   return (

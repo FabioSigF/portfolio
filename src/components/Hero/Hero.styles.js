@@ -121,7 +121,7 @@ export const Social = styled.div`
 `
 
 export const Image = styled.img`
-  max-width: 40%;
+  width: 50%;
 `
 
 export const MouseDown = styled.div`

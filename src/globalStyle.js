@@ -4,7 +4,8 @@ import { FaGithub, FaLinkedin, FaLinkedinIn, FaShareSquare } from 'react-icons/f
 import { FiGithub } from 'react-icons/fi'
 import { BiBookAlt, BiNetworkChart } from 'react-icons/bi'
 import { HiDocumentText, HiOutlineDesktopComputer } from 'react-icons/hi';
-
+import { FcAutomotive, FcFilmReel, FcGlobe } from 'react-icons/fc';
+import reset from 'styled-reset'
 
 export const clr = {
   primary: '#6244c5',
@@ -15,6 +16,26 @@ export const clr = {
   darkgray: '#1F2027',
   bodyBg: '#fff',
   bodyBgGray: "#fafafa",
+}
+
+export const iconList = {
+  whatsapp: <IoLogoWhatsapp />,
+  email: <IoMailOutline />,
+  linkedin: <FaLinkedin/ >,
+  linkedinOut: <FaLinkedinIn />,
+  github: <FaGithub />,
+  githubOut: < FiGithub />,
+  instagram: <IoLogoInstagram />,
+  check: <IoCheckmarkCircle />,
+  network: <BiNetworkChart />,
+  computer: <HiOutlineDesktopComputer />,
+  book: <BiBookAlt />,
+  document: <HiDocumentText />,
+  paperPlane: <IoPaperPlaneOutline />,
+  share: <FaShareSquare />,
+  colorCar: <FcAutomotive />,
+  colorFilmReel: <FcFilmReel />,
+  colorGlobe: <FcGlobe />,
 }
 
 export const fSize = {
@@ -54,22 +75,6 @@ export const deviceSize = {
   desktop: '2560px'
 }
 
-export const iconList = {
-  whatsapp: <IoLogoWhatsapp />,
-  email: <IoMailOutline />,
-  linkedin: <FaLinkedin/ >,
-  linkedinOut: <FaLinkedinIn />,
-  github: <FaGithub />,
-  githubOut: < FiGithub />,
-  instagram: <IoLogoInstagram />,
-  check: <IoCheckmarkCircle />,
-  network: <BiNetworkChart />,
-  computer: <HiOutlineDesktopComputer />,
-  book: <BiBookAlt />,
-  document: <HiDocumentText />,
-  paperPlane: <IoPaperPlaneOutline />,
-  share: <FaShareSquare />,
-}
 
 export const SectionTitle = styled.h2 `
   font-size: ${fSize.title};
@@ -87,33 +92,16 @@ export const borderRadius = {
   normal: "16px",
 }
 
-export const Container = styled.div`
-    box-sizing: border-box;
-    padding-left: 6%;
-    padding-right: 6%;
-    width: 100%;
-    @media screen and (min-width: ${deviceSize.mobileL}) {
-      padding-left: 0;
-      padding-right: 0;
-      max-width: 540px;
-      margin: 0 auto;
-    }
-    @media screen and (min-width: ${deviceSize.tablet}) {
-      max-width: 720px;
-    }
-    @media screen and (min-width: ${deviceSize.laptop}) {
-      max-width: 960px;
-    }
-    @media screen and (min-width: ${deviceSize.laptopM}) {
-      max-width: 1140px;
-    }
-    @media screen and (min-width: ${deviceSize.laptopL}) {
-      max-width: 1320px;
-    }
-`
 
 export const GlobalStyle = createGlobalStyle`
+  ${reset}
   
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+
   body {
     background-color: ${clr.bodyBg};
     box-sizing: border-box;

@@ -1,5 +1,5 @@
 import React from 'react'
-import { Container } from '../../globalStyle'
+import Container from '../../layout/Container/Container'
 import { Content, Copyright, Wrapper } from './Footer.styles'
 import Logo from '../Logo/Logo'
 

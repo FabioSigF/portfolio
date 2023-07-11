@@ -31,7 +31,7 @@ export const Title = styled.h2 `
   text-transform: uppercase;
   display: flex;
   align-items: center;
-  gap: .5rem;
+  gap: 1rem;
 `
 
 export const Text = styled.p `
@@ -49,6 +49,7 @@ export const Features = styled.ul `
   flex-wrap: wrap;
 
   li {
+    color: ${clr.primary};
     font-weight: 500;
     position: relative;
     

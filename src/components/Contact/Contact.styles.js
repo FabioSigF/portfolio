@@ -20,11 +20,9 @@ export const Wheel = styled.div`
   align-items: center;
   justify-content: center;
   
-  &::before {
-    ${pseudoElementCfg}
-    background-color: ${clr.textMain};
-    width: 10px;
-    height: 10px;
+  img {
+    max-width: 200px;
+    height: auto;
   }
 `
 

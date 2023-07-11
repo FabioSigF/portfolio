@@ -3,8 +3,9 @@ import Logo from '../Logo/Logo'
 import { NavLink } from 'react-router-dom'
 
 //STYLES
-import { Container, iconList } from '../../globalStyle'
+import { iconList } from '../../globalStyle'
 import { Contact, Nav, Wrapper } from './Navbar.styles'
+import Container from '../../layout/Container/Container'
 import { useEffect } from 'react'
 import { useState } from 'react'
 

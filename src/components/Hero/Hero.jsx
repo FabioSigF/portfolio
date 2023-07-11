@@ -1,9 +1,10 @@
 import React from 'react'
-import imgHero from '../../imgs/hero.jpg'
+import imgHero from '../../imgs/hero.png'
 
 //Style
-import { Container, iconList } from '../../globalStyle'
+import { iconList } from '../../globalStyle'
 import { Buttons, Content, Description, Header, Image, Introduction, MouseDown, Social, Subtitle, Text, Title, Wrapper } from './Hero.styles'
+import Container from '../../layout/Container/Container'
 import ButtonMain from '../Buttons/ButtonMain/ButtonMain'
 import TypeIt from 'typeit-react'
 import ButtonLink from '../Buttons/ButtonLink/ButtonLink'
