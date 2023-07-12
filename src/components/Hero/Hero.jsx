@@ -3,17 +3,17 @@ import imgHero from '../../imgs/hero.png'
 
 //Style
 import { iconList } from '../../globalStyle'
-import { Buttons, Content, Description, Header, Image, Introduction, MouseDown, Social, Subtitle, Text, Title, Wrapper } from './Hero.styles'
+import { Buttons, Content, Description, Header, Image, Introduction, Social, Subtitle, Text, Title, Wrapper } from './Hero.styles'
 import Container from '../../layout/Container/Container'
 import ButtonMain from '../Buttons/ButtonMain/ButtonMain'
 import TypeIt from 'typeit-react'
 import ButtonLink from '../Buttons/ButtonLink/ButtonLink'
-
+import { Link } from 'react-scroll'
 
 export default function Hero() {
 
   return (
-    <Wrapper>
+    <Wrapper id="hero">
       <Container>
         <Content>
           <Description>
@@ -42,23 +42,52 @@ export default function Hero() {
               </Text>
             </Introduction>
             <Buttons>
-              <ButtonMain to={"#!"}>
-                Contato {iconList.paperPlane}
+              <ButtonMain>
+                <Link
+                  to="contact"
+                  spy={true}
+                  smooth={true}
+                  offset={-70}
+                  duration={500}
+                >
+                  Contato {iconList.paperPlane}
+                </Link>
               </ButtonMain>
               <ButtonLink>
-                Projetos {iconList.book}
+                <Link
+                  to="portfolio"
+                  spy={true}
+                  smooth={true}
+                  offset={-70}
+                  duration={500}
+                >
+                  Projetos {iconList.book}
+                </Link>
               </ButtonLink>
             </Buttons>
             <Social>
               <ul>
                 <li>
-                  <a href="#!">{iconList.github}</a>
+                  <a
+                    target='_blank'
+                    rel='noreferrer'
+                    href="https://github.com/FabioSigF">{iconList.github}</a>
                 </li>
                 <li>
-                  <a href="#!">{iconList.linkedin}</a>
+                  <a
+                    target='_blank'
+                    rel='noreferrer'
+                    href="https://www.linkedin.com/in/fabio-signorini/">
+                    {iconList.linkedin}
+                  </a>
                 </li>
                 <li>
-                  <a href="#!">{iconList.whatsapp}</a>
+                  <a
+                    target='_blank'
+                    rel='noreferrer'
+                    href="https://wa.me/553491585408">
+                    {iconList.whatsapp}
+                  </a>
                 </li>
                 <li>
                   <a href="#!">{iconList.document}</a>
@@ -68,7 +97,6 @@ export default function Hero() {
           </Description>
           <Image src={imgHero} alt="Programador" />
         </Content>
-        <MouseDown />
       </Container>
     </Wrapper>
   )

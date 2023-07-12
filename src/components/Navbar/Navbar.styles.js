@@ -55,8 +55,9 @@ export const Nav = styled.nav`
     color: ${clr.text};
     padding: 0 1.5rem;
 
-    &:hover {
-      color: ${clr.textHover};
+    &:hover,
+    &.active {
+      color: ${clr.primary};
     }
   }
 `
@@ -71,7 +72,7 @@ export const Contact = styled.div`
 
     &::before {
       ${pseudoElementCfg}
-      background-color: ${clr.text};
+      background-color: ${clr.gray};
       height: 100%;
       width: 1px ;
       right: -1rem;
@@ -85,6 +86,10 @@ export const Contact = styled.div`
 
     li a {
       font-size: ${fSize.bodyLarge};
+
+      &:hover {
+        color: ${clr.primary};
+      }
     }
   }
 

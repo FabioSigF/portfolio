@@ -11,15 +11,21 @@ export const Wrapper = styled.a `
   padding: 1rem 1.5rem;
   color: ${clr.white};
   font-weight: 600;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  gap: .75rem;
-  color: ${clr.textLight};
+
+  &, a {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: .75rem;
+    color: ${clr.textLight};
+    
+  }
 
   &:hover {
     background-color: white;
     background-position: 100%;
-    color: ${clr.primary};
+    &, a {
+      color: ${clr.primary};
+    }
   }
 `

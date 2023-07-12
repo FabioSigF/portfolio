@@ -8,10 +8,10 @@ import { Wrapper } from './Home.styles'
 export default function Home() {
   return (
     <Wrapper>
-      <Hero />
-      <About />
-      <Portfolio />
-      <Contact />
+      <Hero/>
+      <About/>
+      <Portfolio/>
+      <Contact/>
     </Wrapper>
   )
 }

@@ -5,7 +5,7 @@ import Container from '../../layout/Container/Container'
 
 export default function About() {
   return (
-    <Wrapper>
+    <Wrapper id="about">
       <Container>
         <SectionTitle light>
           Um pouco sobre mim...

@@ -43,7 +43,7 @@ const projects = [
 
 export default function Portfolio() {
   return (
-    <Wrapper>
+    <Wrapper id="portfolio">
       <Container>
           <SectionTitle>Portfolio</SectionTitle>
           <Subtitle>Cada projeto tem seu pedacinho único...</Subtitle>

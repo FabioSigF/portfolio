@@ -175,34 +175,3 @@ export const Image = styled.img`
     display: block;
   }
 `
-
-export const MouseDown = styled.div`
-  background-color: ${clr.bodyBg};
-  border: 2px solid ${clr.textMainLight};
-  border-radius: 10px;
-
-  display: none;
-  visibility: hidden;
-  justify-content: center;
-
-  position: absolute;
-  bottom: 1rem;
-  left: 8%;
-  width: 20px;
-  height: 32px;
-
-  &::before {
-    ${pseudoElementCfg}
-    width: 2px;
-    height: 8px;
-    background-color: ${clr.textMainLight};
-    top: 3px;
-
-    animation: ${upAndDown} 2s linear infinite;
-  }
-
-  @media screen and (min-width: ${deviceSize.laptop}){
-    display: flex;
-    visibility: visible;
-  }
-`

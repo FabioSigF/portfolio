@@ -2,15 +2,17 @@ import styled from "styled-components";
 import { clr, pseudoElementCfg, transition } from "../../../globalStyle";
 
 export const Wrapper = styled.a`
-  padding: 1rem 1.5rem;
+  margin: 1rem 1.5rem;
   color: ${clr.textMain};
   font-weight: 600;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  gap: .75rem;
-
   position: relative;
+  
+  &, a {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: .75rem;
+  }
   &::before {
       ${pseudoElementCfg}
       width: 0;

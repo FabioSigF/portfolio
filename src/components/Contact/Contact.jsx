@@ -6,7 +6,7 @@ import imgFooter from '../../imgs/contact.png'
 
 export default function Contact() {
   return (
-    <Wrapper>
+    <Wrapper id='contact'>
       <Container>
         <Grid>
           <Img>
@@ -21,17 +21,24 @@ export default function Contact() {
               <span>Contato:</span>
               <ul>
                 <li>
-                  <a href="#!">
-                    {iconList.github}
-                  </a>
+                  <a
+                    target='_blank'
+                    rel='noreferrer'
+                    href="https://github.com/FabioSigF">{iconList.github}</a>
                 </li>
                 <li>
-                  <a href="#!">
+                  <a
+                    target='_blank'
+                    rel='noreferrer'
+                    href="https://www.linkedin.com/in/fabio-signorini/">
                     {iconList.linkedin}
                   </a>
                 </li>
                 <li>
-                  <a href="#!">
+                  <a
+                    target='_blank'
+                    rel='noreferrer'
+                    href="https://wa.me/553491585408">
                     {iconList.whatsapp}
                   </a>
                 </li>

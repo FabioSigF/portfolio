@@ -1,12 +1,12 @@
 import React from 'react'
 import Logo from '../Logo/Logo'
-import { NavLink } from 'react-router-dom'
 
 //STYLES
 import { iconList } from '../../globalStyle'
 import { BtnMenuClose, BtnMenuHambuguer, Contact, Nav, NavContainer, NavListMobile, NavMobile, Wrapper } from './Navbar.styles'
 import { useEffect } from 'react'
 import { useState } from 'react'
+import { Link } from 'react-scroll'
 
 export default function Navbar() {
 
@@ -65,37 +65,67 @@ export default function Navbar() {
             <Nav>
               <ul>
                 <li>
-                  <NavLink to="/">
+                  <Link
+                    to="hero"
+                    spy={true}
+                    smooth={true}
+                    duration={500}
+                    offset={-70}
+                  >
                     Início
-                  </NavLink>
+                  </Link>
                 </li>
                 <li>
-                  <NavLink to="/">
+                  <Link
+                    to="about"
+                    spy={true}
+                    smooth={true}
+                    offset={-70}
+                    duration={500}
+                  >
                     Sobre
-                  </NavLink>
+                  </Link>
                 </li>
                 <li>
-                  <NavLink to="/">
+                  <Link
+                    to="portfolio"
+                    spy={true}
+                    smooth={true}
+                    offset={-70}
+                    duration={500}
+                  >
                     Projetos
-                  </NavLink>
+                  </Link>
                 </li>
               </ul>
             </Nav>
             <Contact>
-              <p>Me Contate</p>
+              <p>
+                Me Contate
+              </p>
               <ul>
                 <li>
-                  <a href="#!">
+                  <a
+                    target='_blank'
+                    rel='noreferrer'
+                    href="https://wa.me/553491585408">
                     {iconList.whatsapp}
                   </a>
                 </li>
                 <li>
-                  <a href="#!">
-                    {iconList.instagram}
+                  <a
+                    target='_blank'
+                    rel='noreferrer'
+                    href="https://www.linkedin.com/in/fabio-signorini/">
+                    {iconList.linkedin}
                   </a>
                 </li>
                 <li>
-                  <a href="#!">
+                  <a
+                    target='_blank'
+                    rel='noreferrer'
+                    href='mailto:fabiosgcontato@gmail.com'
+                  >
                     {iconList.email}
                   </a>
                 </li>
