@@ -6,18 +6,23 @@ export const Wrapper = styled.div `
   align-items: center;
   flex-direction: column;
   gap: 1rem;
-  &.reverse {
-    flex-direction: row-reverse;
-  }
 
-  @media screen and (min-width: ${deviceSize.laptop}){
+  
+  @media screen and (min-width: ${deviceSize.tablet}){
     flex-direction: row;
+    
+    &.reverse {
+      flex-direction: row-reverse;
+    }
   }
 `
 
 export const Image = styled.img `
   display: block;
-  width: 50%;
+  width: 100%;
+  @media screen and (min-width: ${deviceSize.tablet}){
+    width: 50%;
+  }
 `
 
 export const Description = styled.div `
@@ -25,7 +30,10 @@ export const Description = styled.div `
   flex-direction: column;
   align-items: center;
   gap: 1rem;
-  width: 50%;
+  width: 100%;
+  @media screen and (min-width: ${deviceSize.tablet}){
+    width: 50%;
+  } 
 `
 
 export const Title = styled.h2 `
@@ -48,6 +56,7 @@ export const Text = styled.p `
 export const Features = styled.ul `
   display: flex;
   align-items: center;
+  justify-content: center;
   gap: 1rem;
   flex-wrap: wrap;
 
@@ -59,18 +68,16 @@ export const Features = styled.ul `
     &:not(:last-child)
     {
       &::before {
-      ${pseudoElementCfg}
-      background-color: ${clr.textMainLight};
-      border-radius: 50%;
-      width: 5px;
-      height: 5px;
-      top: 6px;
-      right: -10px;
-    }
+        ${pseudoElementCfg}
+        background-color: ${clr.textMainLight};
+        border-radius: 50%;
+        width: 5px;
+        height: 5px;
+        top: 6px;
+        right: -10px;
+      }
     }
   }
-
-
   
 `
 
@@ -78,4 +85,8 @@ export const Buttons = styled.div `
   display: flex;
   align-items: center;
   gap: .5rem;
+
+  @media screen and (min-width: ${deviceSize.mobileL}){
+    flex-direction: row;
+  }
 `

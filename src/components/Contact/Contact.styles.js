@@ -19,7 +19,7 @@ export const Grid = styled.div`
   }
 `
 
-export const Wheel = styled.div`
+export const Img = styled.div`
   position: relative;
   display: flex;
   align-items: center;
@@ -53,15 +53,13 @@ export const Content = styled.div`
 
 export const Social = styled.div`
   display: flex;
+  flex-direction: column;
   align-items: center;
   justify-content: space-between;
   gap: 2rem;
   margin-top: 5rem;
   color: ${clr.textLight};
   flex-direction: column;
-  @media screen and (min-width: ${deviceSize.laptop}){
-    flex-direction: row;
-  }
 `
 
 export const Email = styled.div`

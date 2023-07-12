@@ -1,6 +1,6 @@
 import React from 'react'
 import { SectionTitle, iconList } from '../../globalStyle'
-import { Projects, Subtitle, Wrapper } from './Portfolio.styles'
+import { Projects, ProjectsItem, ProjectsList, Subtitle, Wrapper } from './Portfolio.styles'
 import Container from '../../layout/Container/Container'
 import Project from '../Project/Project'
 
@@ -48,9 +48,9 @@ export default function Portfolio() {
           <SectionTitle>Portfolio</SectionTitle>
           <Subtitle>Cada projeto tem seu pedacinho único...</Subtitle>
           <Projects>
-            <ul>
+            <ProjectsList>
               {projects.map((item, key) => (
-                <li key={key}>
+                <ProjectsItem key={key}>
                   <Project 
                     title={item.title}
                     icon={item.icon}
@@ -61,9 +61,9 @@ export default function Portfolio() {
                     image={item.image}
                     id={item.id}
                   />
-                </li>
+                </ProjectsItem>
               ))}
-            </ul>
+            </ProjectsList>
           </Projects>
       </Container>
     </Wrapper>

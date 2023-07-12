@@ -1,34 +1,24 @@
 import React from 'react'
-import { Content, Email, Grid, Medias, Social, Wheel, Wrapper } from './Contact.styles'
+import { Content, Email, Grid, Img, Medias, Social, Wrapper } from './Contact.styles'
 import { iconList } from '../../globalStyle'
 import Container from '../../layout/Container/Container'
-import wheel from '../../imgs/contact.png'
-import ButtonMain from '../../components/Buttons/ButtonMain/ButtonMain'
+import imgFooter from '../../imgs/contact.png'
+
 export default function Contact() {
   return (
     <Wrapper>
       <Container>
         <Grid>
-          <Wheel>
-            <img src={wheel} alt="decorative wheel" />
-          </Wheel>
+          <Img>
+            <img src={imgFooter} alt="decorative" />
+          </Img>
           <Content>
             <h3>Vamos trabalhar juntos!</h3>
-            <p>You can express yourself however you want and whenever you want, for free. You can customize a template or make your own.</p>
+            <p>Disciplina e sede de conhecimento são os pontos principais da minha personalidade como colaborador. Quero uma oportunidade para mostrar o meu máximo para você!</p>
           </Content>
-          <ButtonMain>Contato {iconList.paperPlane}</ButtonMain>
-        </Grid>
-        <Grid>
-          <div></div>
           <Social>
-            <Email>
-              <span>Email: </span>
-              <a href="mailto:fabiosgcontato@gmail.com">
-                fabiosgcontato@gmail.com
-              </a>
-            </Email>
             <Medias>
-              <span>Follow me:</span>
+              <span>Contato:</span>
               <ul>
                 <li>
                   <a href="#!">
@@ -47,6 +37,12 @@ export default function Contact() {
                 </li>
               </ul>
             </Medias>
+            <Email>
+              <span>Email: </span>
+              <a href="mailto:fabiosgcontato@gmail.com">
+                fabiosgcontato@gmail.com
+              </a>
+            </Email>
           </Social>
         </Grid>
       </Container>

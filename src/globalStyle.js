@@ -16,6 +16,7 @@ export const clr = {
   darkgray: '#1F2027',
   bodyBg: '#fff',
   bodyBgGray: "#fafafa",
+  gray: "#d1d1d1",
 }
 
 export const iconList = {
