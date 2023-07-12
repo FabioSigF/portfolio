@@ -43,7 +43,6 @@ export const Content = styled.div`
   }
   p 
   {
-    line-height: ${`calc(${fSize.body} + .5rem)`};
     opacity: .7;
   }
 

@@ -34,19 +34,20 @@ export const SkillCard = styled.li`
   ul
   {
     display: flex;
+    flex-direction: column;
     flex-wrap: wrap;
     li {
       display: flex;
       align-items: center;
       flex-wrap: wrap;
-      gap: .5rem;
+      gap: .25rem;
       width: 50%;
 
       font-weight: 500;
       margin-bottom: .75rem;
       padding-bottom: .5rem;
       
-      p {
+      span {
         font-size: ${fSize.xsmall};
         font-weight: 700;
         color: ${clr.textMainLight};
@@ -55,6 +56,16 @@ export const SkillCard = styled.li`
         padding-left: 1.5rem;
         width: 100%;
       }
+
+      p {
+        display: flex;
+        align-items: center;
+        gap: .5rem;
+      }
+    }
+
+    @media screen and (min-width: ${deviceSize.mobileM}){
+      flex-direction: row;
     }
   }
 `

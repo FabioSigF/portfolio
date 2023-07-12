@@ -23,26 +23,29 @@ export default function About() {
                 <h3>FrontEnd Developer</h3>
               </SkillHeader>
               <ul>
-                <li>{iconList.check} HTML
-                  <p>Avançado</p>
+                <li>
+                  <p>
+                  {iconList.check} HTML
+                  </p>
+                  <span>Avançado</span>
                 </li>
-                <li>{iconList.check} ReactJS
-                  <p>Avançado</p>
+                <li><p>{iconList.check} ReactJS</p>
+                  <span>Avançado</span>
                 </li>
-                <li>{iconList.check} CSS
-                  <p>Avançado</p>
+                <li><p>{iconList.check} CSS</p>
+                  <span>Avançado</span>
                 </li>
-                <li>{iconList.check} SCSS
-                  <p>Avançado</p>
+                <li><p>{iconList.check} SCSS</p>
+                  <span>Avançado</span>
                 </li>
-                <li>{iconList.check} Javascript
-                  <p>Avançado</p>
+                <li><p>{iconList.check} Javascript</p>
+                  <span>Avançado</span>
                 </li>
-                <li>{iconList.check} Styled Comp
-                  <p>Avançado</p>
+                <li><p>{iconList.check} Styled Comp</p>
+                  <span>Avançado</span>
                 </li>
-                <li>{iconList.check} Git
-                  <p>Intermediário</p>
+                <li><p>{iconList.check} Git</p>
+                  <span>Intermediário</span>
                 </li>
               </ul>
             </SkillCard>
@@ -52,14 +55,14 @@ export default function About() {
                 <h3>BackEnd Developer</h3>
               </SkillHeader>
               <ul>
-                <li>{iconList.check} Firebase
-                  <p>Intermediário</p>
+                <li><p>{iconList.check} Firebase</p>
+                  <span>Intermediário</span>
                 </li>
-                <li>{iconList.check} Javascript
-                  <p>Avançado</p>
+                <li><p>{iconList.check} Javascript</p>
+                  <span>Avançado</span>
                 </li>
-                <li>{iconList.check} MongoDB
-                  <p>Intermediário</p>
+                <li><p>{iconList.check} MongoDB</p>
+                  <span>Intermediário</span>
                 </li>
 
               </ul>
@@ -70,17 +73,17 @@ export default function About() {
                 <h3>Complementar</h3>
               </SkillHeader>
               <ul>
-                <li style={{ width: '100%' }}>{iconList.check} Inglês
-                  <p>Avançado</p>
+                <li style={{ width: '100%' }}><p>{iconList.check} Inglês</p>
+                  <span>Avançado</span>
                 </li>
-                <li style={{ width: '100%' }}>{iconList.check} Acessibilidade Web
-                  <p>Intermediário</p>
+                <li style={{ width: '100%' }}><p>{iconList.check} Acessibilidade Web</p>
+                  <span>Intermediário</span>
                 </li>
-                <li style={{ width: '100%' }}>{iconList.check} Arquitetura Mobile First
-                  <p>Avançado</p>
+                <li style={{ width: '100%' }}><p>{iconList.check} Arquitetura Mobile </p>First
+                  <span>Avançado</span>
                 </li>
-                <li style={{ width: '100%' }}>{iconList.check} Linguagem C/C++
-                  <p>Intermediário</p>
+                <li style={{ width: '100%' }}><p>{iconList.check} Linguagem C/C++</p>
+                  <span>Intermediário</span>
                 </li>
               </ul>
             </SkillCard>

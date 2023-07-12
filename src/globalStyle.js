@@ -80,10 +80,14 @@ export const deviceSize = {
 
 
 export const SectionTitle = styled.h2 `
-  font-size: ${fSize.title};
+  font-size: ${fSize.titleMobile};
   font-weight: 500;
   color: ${props => props.light ? clr.textLight : clr.textMain};
   max-width: 300px;
+  
+  @media screen and (min-width: ${deviceSize.laptop}){
+    font-size: ${fSize.title};
+  }
 `
 
 export const padding = {
@@ -137,6 +141,11 @@ export const GlobalStyle = createGlobalStyle`
   h5,
   h6 {
     font-family: ${fFamily.title};
+  }
+
+  p {
+    font-size: ${fSize.body};
+    line-height: ${`calc(${fSize.body} + .5rem)`};
   }
 
   strong
