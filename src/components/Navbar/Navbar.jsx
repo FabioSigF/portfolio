@@ -4,72 +4,153 @@ import { NavLink } from 'react-router-dom'
 
 //STYLES
 import { iconList } from '../../globalStyle'
-import { Contact, Nav, Wrapper } from './Navbar.styles'
-import Container from '../../layout/Container/Container'
+import { BtnMenuClose, BtnMenuHambuguer, Contact, Nav, NavContainer, NavListMobile, NavMobile, Wrapper } from './Navbar.styles'
 import { useEffect } from 'react'
 import { useState } from 'react'
 
 export default function Navbar() {
 
+  //Background color of navbar when scroll down
   const [changeColor, setChangeColor] = useState(false);
+  //Screen size
+  const [screenSize, setScreenSize] = useState();
+  //Show menu mobile if true
+  const [showMenuMobile, setShowMenuMobile] = useState(false);
+  //If open menu, sidebar menu opens
+  const [openMenu, setOpenMenu] = useState(false);
+
+  function scrollPosition() {
+    if (window.scrollY > 10) {
+      setChangeColor(true);
+    }
+    else {
+      setChangeColor(false);
+    }
+  }
 
   useEffect(() => {
-    function scrollPosition(){
-      if(window.scrollY > 10)
-      {
-        setChangeColor(true);
-      }
-      else
-      {
-        setChangeColor(false);
-      }
-    }
+
+    const handleResize = () => setScreenSize(window.innerWidth)
+    window.addEventListener('resize', handleResize);
+
+    handleResize();
+
     window.addEventListener('scroll', scrollPosition);
+
+    return () => window.removeEventListener('resize', handleResize)
+
   }, []);
+
+  //Show menu desktop according to window size
+  useEffect(() => {
+    if (screenSize >= 992) {
+      setShowMenuMobile(false)
+      setOpenMenu(false);
+    } else {
+      setShowMenuMobile(true)
+    }
+  }, [screenSize])
+
+  //Show menu mobile
+  const toggleMenuMobile = (e) => {
+    e.preventDefault()
+    setOpenMenu(!openMenu);
+  }
   return (
     <Wrapper className={changeColor ? "header_scroll" : ''}>
-      <Container>
+      <NavContainer>
         <Logo />
-        <Nav>
-          <ul>
+        {!showMenuMobile && (
+          <>
+            <Nav>
+              <ul>
+                <li>
+                  <NavLink to="/">
+                    Início
+                  </NavLink>
+                </li>
+                <li>
+                  <NavLink to="/">
+                    Sobre
+                  </NavLink>
+                </li>
+                <li>
+                  <NavLink to="/">
+                    Projetos
+                  </NavLink>
+                </li>
+              </ul>
+            </Nav>
+            <Contact>
+              <p>Me Contate</p>
+              <ul>
+                <li>
+                  <a href="#!">
+                    {iconList.whatsapp}
+                  </a>
+                </li>
+                <li>
+                  <a href="#!">
+                    {iconList.instagram}
+                  </a>
+                </li>
+                <li>
+                  <a href="#!">
+                    {iconList.email}
+                  </a>
+                </li>
+              </ul>
+            </Contact>
+          </>
+        )}
+        {showMenuMobile && !openMenu && (
+          <>
+            <BtnMenuHambuguer
+              onClick={(e) => toggleMenuMobile(e)}
+            >{iconList.menuHamburger}</BtnMenuHambuguer>
+          </>
+        )}
+
+        <NavMobile menuopen={openMenu}>
+          <Logo />
+          <NavListMobile>
             <li>
-              <NavLink to="/">
-                Início
-              </NavLink>
+              <a href="#!">Início</a>
             </li>
             <li>
-              <NavLink to="/">
-                Sobre
-              </NavLink>
+              <a href="#!">Sobre</a>
             </li>
             <li>
-              <NavLink to="/">
-                Projetos
-              </NavLink>
-            </li>
-          </ul>
-        </Nav>
-        <Contact>
-          <p>Me Contate</p>
-          <ul>
-            <li>
-              <a href="#!">
-                {iconList.whatsapp}
-              </a>
+              <a href="#!">Projetos</a>
             </li>
             <li>
-              <a href="#!">
-                {iconList.instagram}
-              </a>
+              <a href="#!">Contato</a>
             </li>
-            <li>
-              <a href="#!">
-                {iconList.email}
-              </a>
-            </li>
-          </ul>
-        </Contact>
-      </Container>
+          </NavListMobile>
+
+          <Contact>
+            <p>Me Contate</p>
+            <ul>
+              <li>
+                <a href="#!">
+                  {iconList.whatsapp}
+                </a>
+              </li>
+              <li>
+                <a href="#!">
+                  {iconList.instagram}
+                </a>
+              </li>
+              <li>
+                <a href="#!">
+                  {iconList.email}
+                </a>
+              </li>
+            </ul>
+          </Contact>
+          <BtnMenuClose onClick={(e) => toggleMenuMobile(e)}>{iconList.closeX}</BtnMenuClose>
+        </NavMobile>
+      </NavContainer>
     </Wrapper>
   )
 }

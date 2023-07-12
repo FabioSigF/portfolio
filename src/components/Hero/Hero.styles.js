@@ -1,8 +1,8 @@
 import styled, { keyframes } from "styled-components";
-import { clr, fFamily, fSize, pseudoElementCfg, transition, } from "../../globalStyle";
+import { clr, deviceSize, fFamily, fSize, pseudoElementCfg, transition, } from "../../globalStyle";
 
 //ANIMATION
-const upAndDown = keyframes `
+const upAndDown = keyframes`
   0% {
     transform: translateY(3px);
   } 30% {
@@ -15,7 +15,9 @@ const upAndDown = keyframes `
 
 //STYLES
 export const Wrapper = styled.section`
-  min-height: 100vh;
+  position: relative;
+  height: 100vh;
+  max-height: 700px;
   display: flex;
   align-items: center;
 `
@@ -26,30 +28,58 @@ export const Content = styled.div`
   justify-content: space-between;
   gap: 1rem;
   position: relative;
-  padding-top: 5rem;
+  padding-top: 8rem;
+
+  @media screen and (min-width: ${deviceSize.tablet}){
+    align-items: flex-start;
+  }
 `
 
 export const Description = styled.div`
-  width: 50%;
   display: flex;
   flex-direction: column;
   gap: 2rem;
-  justify-content: flex-start;
-  align-items: flex-start;
+  align-items: center;
+  
+  @media screen and (min-width: ${deviceSize.tablet}){
+    width: 50%;
+    justify-content: flex-start;
+    align-items: flex-start;
+  }
 `
 
 export const Introduction = styled.div`
   display: flex;
   flex-direction: column;
-  align-items: flex-start;
+  align-items: center;
   gap: 2rem;
   margin-bottom: 1rem;
+
+  @media screen and (min-width: ${deviceSize.tablet}){
+    align-items: flex-start;
+  }
+`
+
+export const Header = styled.div`
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+
+  @media screen and (min-width: ${deviceSize.tablet}){
+    align-items: flex-start;
+  }
 `
 
 export const Title = styled.h1`
-  font-size: ${fSize.xlarge};
+  font-size: ${fSize.titleMobile};
   font-weight: 500;
   margin-left: -.2rem;
+  
+  @media screen and (min-width: ${deviceSize.laptop}){
+    font-size: ${fSize.xlarge};
+    text-align: start;
+  }
 `
 
 export const Subtitle = styled.h2`
@@ -58,42 +88,55 @@ export const Subtitle = styled.h2`
   position: relative;
   display: flex;
   align-items: center;
+  flex-direction: column;
+
   gap: .5rem;
-  padding-left: 5rem;
-  &::before {
-    ${pseudoElementCfg}
-    width: 4rem;
-    height: 1px;
-    background-color: ${clr.textMain};
-    left: 0;
-  }
+  
 
   span {
     color: ${clr.primary};
     font-weight: 600;
   }
-`
-
-export const Header = styled.div`
-  display: flex;
-  flex-direction: column;
-  gap: 1rem;
+  
+  @media screen and (min-width: ${deviceSize.tablet}){
+    flex-direction: row;
+    padding-left: 5rem;
+    &::before {
+      ${pseudoElementCfg}
+      width: 4rem;
+      height: 1px;
+      background-color: ${clr.textMain};
+      left: 0;
+    }
+  } 
 `
 
 export const Text = styled.div`
   p {
     line-height: ${`calc(${fSize.body} + .5rem)`};
+    text-align: center;
+  }
+
+  @media screen and (min-width: ${deviceSize.tablet}){
+    p {
+      text-align: start;
+    }
   }
 `
 
 export const Buttons = styled.div`
   display: flex;
   align-items: center;
-  gap: 1rem;
   margin-bottom: 1rem;
+  
+  @media screen and (min-width: ${deviceSize.mobileM}){
+    gap: 1rem;
+  }
 `
 
 export const Social = styled.div`
+  display: none;
+  visibility: hidden;
 
   ul {
     display: flex;
@@ -118,10 +161,19 @@ export const Social = styled.div`
     }
   }
 
+  @media screen and (min-width: ${deviceSize.tablet}){
+    display: block;
+    visibility: visible;
+  }
 `
 
 export const Image = styled.img`
   width: 50%;
+  display: none;
+
+  @media screen and (min-width: ${deviceSize.tablet}){
+    display: block;
+  }
 `
 
 export const MouseDown = styled.div`
@@ -129,7 +181,8 @@ export const MouseDown = styled.div`
   border: 2px solid ${clr.textMainLight};
   border-radius: 10px;
 
-  display: flex;
+  display: none;
+  visibility: hidden;
   justify-content: center;
 
   position: absolute;
@@ -146,5 +199,10 @@ export const MouseDown = styled.div`
     top: 3px;
 
     animation: ${upAndDown} 2s linear infinite;
+  }
+
+  @media screen and (min-width: ${deviceSize.laptop}){
+    display: flex;
+    visibility: visible;
   }
 `

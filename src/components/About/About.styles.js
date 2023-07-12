@@ -1,12 +1,12 @@
 import styled from "styled-components";
-import { borderRadius, clr, fSize, padding } from "../../globalStyle";
+import { borderRadius, clr, deviceSize, fSize, padding } from "../../globalStyle";
 
-export const Wrapper = styled.div `
+export const Wrapper = styled.div`
   ${padding.section}
   background-color: ${clr.primary};
 `
 
-export const Description = styled.div `
+export const Description = styled.div`
   margin-bottom: 2rem;
   margin-top: 2rem;
   color: ${clr.textLight};
@@ -16,13 +16,18 @@ export const Description = styled.div `
   }
 `
 
-export const SkillsList = styled.ul `
-  display: grid;
-  grid-template-columns: 1fr 1fr .75fr;
+export const SkillsList = styled.ul`
+  display: flex;
+  flex-direction: column;
   gap: 1rem;
+  @media screen and (min-width: ${deviceSize.laptop}){
+    display: grid;
+    grid-template-columns: 1fr 1fr .75fr;
+    flex-direction: row;
+  }
 `
 
-export const SkillCard = styled.li `
+export const SkillCard = styled.li`
   background-color: ${clr.secondary};
   border-radius: ${borderRadius.normal};
   padding: 2rem;
@@ -54,7 +59,7 @@ export const SkillCard = styled.li `
   }
 `
 
-export const SkillHeader = styled.div `
+export const SkillHeader = styled.div`
   display: flex;
   align-items: center;
   justify-content: center;

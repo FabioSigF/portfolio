@@ -1,15 +1,18 @@
 import styled from "styled-components";
-import { clr, fSize, pseudoElementCfg } from "../../globalStyle";
+import { clr, deviceSize, fSize, pseudoElementCfg } from "../../globalStyle";
 
 export const Wrapper = styled.div `
   display: flex;
   align-items: center;
+  flex-direction: column;
   gap: 1rem;
-
   &.reverse {
     flex-direction: row-reverse;
   }
 
+  @media screen and (min-width: ${deviceSize.laptop}){
+    flex-direction: row;
+  }
 `
 
 export const Image = styled.img `

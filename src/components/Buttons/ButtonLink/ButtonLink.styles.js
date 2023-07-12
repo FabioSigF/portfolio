@@ -2,7 +2,7 @@ import styled from "styled-components";
 import { clr, pseudoElementCfg, transition } from "../../../globalStyle";
 
 export const Wrapper = styled.a`
-  margin: 1rem 1.5rem;
+  padding: 1rem 1.5rem;
   color: ${clr.textMain};
   font-weight: 600;
   display: flex;

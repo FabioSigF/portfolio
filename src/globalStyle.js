@@ -2,7 +2,7 @@ import styled, { createGlobalStyle } from 'styled-components'
 import { IoCheckmarkCircle, IoLogoInstagram, IoLogoWhatsapp, IoMailOutline, IoPaperPlaneOutline } from 'react-icons/io5'
 import { FaGithub, FaLinkedin, FaLinkedinIn, FaShareSquare } from 'react-icons/fa'
 import { FiGithub } from 'react-icons/fi'
-import { BiBookAlt, BiNetworkChart } from 'react-icons/bi'
+import { BiBookAlt, BiMenuAltRight, BiNetworkChart, BiX } from 'react-icons/bi'
 import { HiDocumentText, HiOutlineDesktopComputer } from 'react-icons/hi';
 import { FcAutomotive, FcFilmReel, FcGlobe } from 'react-icons/fc';
 import reset from 'styled-reset'
@@ -36,6 +36,8 @@ export const iconList = {
   colorCar: <FcAutomotive />,
   colorFilmReel: <FcFilmReel />,
   colorGlobe: <FcGlobe />,
+  menuHamburger: <BiMenuAltRight />,
+  closeX: <BiX />,
 }
 
 export const fSize = {
@@ -45,6 +47,7 @@ export const fSize = {
   bodyLarge: '1.25rem',
   titlesmall: '1.8rem',
   title: '2.8rem',
+  titleMobile: '2.5rem',
   xlarge: '4rem'
 }
 
