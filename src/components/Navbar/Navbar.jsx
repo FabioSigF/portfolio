@@ -145,34 +145,79 @@ export default function Navbar() {
           <Logo />
           <NavListMobile>
             <li>
-              <a href="#!">Início</a>
+              <Link
+                to="hero"
+                spy={true}
+                smooth={true}
+                duration={500}
+                offset={-70}
+                onClick={(e) => toggleMenuMobile(e)}
+              >
+                Início
+              </Link>
             </li>
             <li>
-              <a href="#!">Sobre</a>
+              <Link
+                to="about"
+                spy={true}
+                smooth={true}
+                offset={-70}
+                duration={500}
+                onClick={(e) => toggleMenuMobile(e)}
+              >
+                Sobre
+              </Link>
             </li>
             <li>
-              <a href="#!">Projetos</a>
+              <Link
+                to="portfolio"
+                spy={true}
+                smooth={true}
+                offset={-70}
+                duration={500}
+                onClick={(e) => toggleMenuMobile(e)}
+              >
+                Projetos
+              </Link>
             </li>
             <li>
-              <a href="#!">Contato</a>
+              <Link
+                to="contact"
+                spy={true}
+                smooth={true}
+                offset={-70}
+                duration={500}
+                onClick={(e) => toggleMenuMobile(e)}
+              >
+                Contato
+              </Link>
             </li>
           </NavListMobile>
 
           <Contact>
-            <p>Me Contate</p>
             <ul>
               <li>
-                <a href="#!">
+                <a
+                  target='_blank'
+                  rel='noreferrer'
+                  href="https://wa.me/553491585408">
                   {iconList.whatsapp}
                 </a>
               </li>
               <li>
-                <a href="#!">
-                  {iconList.instagram}
+                <a
+                  target='_blank'
+                  rel='noreferrer'
+                  href="https://www.linkedin.com/in/fabio-signorini/">
+                  {iconList.linkedin}
                 </a>
               </li>
               <li>
-                <a href="#!">
+                <a
+                  target='_blank'
+                  rel='noreferrer'
+                  href='mailto:fabiosgcontato@gmail.com'
+                >
                   {iconList.email}
                 </a>
               </li>

@@ -42,17 +42,17 @@ export default function Hero() {
               </Text>
             </Introduction>
             <Buttons>
-              <ButtonMain>
-                <Link
-                  to="contact"
-                  spy={true}
-                  smooth={true}
-                  offset={-70}
-                  duration={500}
-                >
+              <Link
+                to="contact"
+                spy={true}
+                smooth={true}
+                offset={-70}
+                duration={500}
+              >
+                <ButtonMain>
                   Contato {iconList.paperPlane}
-                </Link>
-              </ButtonMain>
+                </ButtonMain>
+              </Link>
               <ButtonLink>
                 <Link
                   to="portfolio"

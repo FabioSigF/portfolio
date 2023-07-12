@@ -67,7 +67,7 @@ export const Contact = styled.div`
   align-items: center;
   gap: 1rem;
   p {
-    display: none;
+    display: block;
     position: relative;
 
     &::before {
@@ -85,7 +85,7 @@ export const Contact = styled.div`
     gap: 2rem;
 
     li a {
-      font-size: ${fSize.bodyLarge};
+      font-size: ${fSize.titlesmall};
 
       &:hover {
         color: ${clr.primary};
@@ -94,9 +94,6 @@ export const Contact = styled.div`
   }
 
   @media screen and (min-width: ${deviceSize.laptop}){
-    p {
-      display: block;
-    }
 
     ul {
       flex-direction: row;
@@ -110,6 +107,7 @@ export const Contact = styled.div`
 
     li:last-child {
       a {
+        font-size: ${fSize.bodyLarge};
         padding: 0 0 0 1rem;
       }
     }
@@ -161,7 +159,7 @@ export const NavListMobile = styled.ul `
   gap: 1.5rem;
   li a {
     text-transform: uppercase;
-    font-size: ${fSize.body};
+    font-size: ${fSize.bodyLarge};
     letter-spacing: 3px;
   }
 `
