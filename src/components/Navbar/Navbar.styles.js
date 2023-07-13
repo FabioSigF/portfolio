@@ -85,7 +85,7 @@ export const Contact = styled.div`
     gap: 2rem;
 
     li a {
-      font-size: ${fSize.titlesmall};
+      font-size: ${fSize.bodyLarge};
 
       &:hover {
         color: ${clr.primary};
@@ -105,10 +105,9 @@ export const Contact = styled.div`
       font-size: ${fSize.body};
     }
 
-    li:last-child {
+    li{
       a {
-        font-size: ${fSize.bodyLarge};
-        padding: 0 0 0 1rem;
+        font-size: ${fSize.titlesmall};
       }
     }
   }

@@ -89,9 +89,6 @@ export default function Hero() {
                     {iconList.whatsapp}
                   </a>
                 </li>
-                <li>
-                  <a href="#!">{iconList.document}</a>
-                </li>
               </ul>
             </Social>
           </Description>
