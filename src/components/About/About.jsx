@@ -27,25 +27,18 @@ export default function About() {
                   <p>
                   {iconList.check} HTML
                   </p>
-                  <span>Avançado</span>
                 </li>
                 <li><p>{iconList.check} ReactJS</p>
-                  <span>Avançado</span>
                 </li>
                 <li><p>{iconList.check} CSS</p>
-                  <span>Avançado</span>
                 </li>
-                <li><p>{iconList.check} SCSS</p>
-                  <span>Avançado</span>
+                <li><p>{iconList.check} Sass</p>
                 </li>
-                <li><p>{iconList.check} Javascript</p>
-                  <span>Avançado</span>
+                <li><p>{iconList.check} JavaScript</p>
                 </li>
                 <li><p>{iconList.check} Styled Comp</p>
-                  <span>Avançado</span>
                 </li>
                 <li><p>{iconList.check} Git</p>
-                  <span>Intermediário</span>
                 </li>
               </ul>
             </SkillCard>
@@ -56,15 +49,18 @@ export default function About() {
               </SkillHeader>
               <ul>
                 <li><p>{iconList.check} Firebase</p>
-                  <span>Intermediário</span>
                 </li>
-                <li><p>{iconList.check} Javascript</p>
-                  <span>Avançado</span>
+                <li><p>{iconList.check} JavaScript</p>
                 </li>
-                <li><p>{iconList.check} MongoDB</p>
-                  <span>Intermediário</span>
+                <li>
+                  <p>{iconList.check} MongoDB</p>
                 </li>
-
+                <li>
+                  <p>{iconList.check} Postman API</p>
+                </li>
+                <li>
+                  <p>{iconList.check} Express</p>
+                </li>
               </ul>
             </SkillCard>
             <SkillCard>
@@ -74,16 +70,12 @@ export default function About() {
               </SkillHeader>
               <ul>
                 <li style={{ width: '100%' }}><p>{iconList.check} Inglês</p>
-                  <span>Avançado</span>
                 </li>
                 <li style={{ width: '100%' }}><p>{iconList.check} Acessibilidade Web</p>
-                  <span>Intermediário</span>
                 </li>
                 <li style={{ width: '100%' }}><p>{iconList.check} Arquitetura Mobile </p>First
-                  <span>Avançado</span>
                 </li>
                 <li style={{ width: '100%' }}><p>{iconList.check} Linguagem C/C++</p>
-                  <span>Intermediário</span>
                 </li>
               </ul>
             </SkillCard>
