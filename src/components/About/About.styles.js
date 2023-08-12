@@ -1,5 +1,6 @@
 import styled from "styled-components";
-import { borderRadius, clr, deviceSize, fSize, padding } from "../../globalStyle";
+import { clr, deviceSize, fSize, padding } from "../../globalStyle";
+import imagebg from '../../imgs/pattern-bg.svg'
 
 export const Wrapper = styled.div`
   ${padding.section}
@@ -19,51 +20,29 @@ export const Description = styled.div`
 export const SkillsList = styled.ul`
   display: flex;
   flex-direction: column;
-  gap: 1rem;
+  position: relative;
+  gap: 2rem;
+  
   @media screen and (min-width: ${deviceSize.laptop}){
     display: grid;
-    grid-template-columns: 1fr 1fr .75fr;
+    grid-template-columns: 1fr 1fr 1fr;
     flex-direction: row;
   }
+
 `
 
-export const SkillCard = styled.li`
-  background-color: ${clr.secondary};
-  border-radius: ${borderRadius.normal};
+export const SkillCard = styled.li` 
+  background-color: ${clr.bodyBg};
+  background-image: ${`url(${imagebg})`};
+  border: 5px solid rgba(0, 0, 0, 0.03);
   padding: 2rem;
+  position: relative;
   ul
   {
     display: flex;
     flex-direction: column;
     flex-wrap: wrap;
-    li {
-      display: flex;
-      align-items: center;
-      flex-wrap: wrap;
-      gap: .25rem;
-      width: 50%;
-
-      font-weight: 500;
-      margin-bottom: .75rem;
-      padding-bottom: .5rem;
-      
-      span {
-        font-size: ${fSize.xsmall};
-        font-weight: 700;
-        color: ${clr.textMainLight};
-        text-transform: uppercase;
-        display: block;
-        padding-left: 1.5rem;
-        width: 100%;
-      }
-
-      p {
-        display: flex;
-        align-items: center;
-        gap: .5rem;
-      }
-    }
-
+    
     @media screen and (min-width: ${deviceSize.mobileM}){
       flex-direction: row;
     }
@@ -85,5 +64,6 @@ export const SkillHeader = styled.div`
   h3 {
     font-size: ${fSize.bodyLarge};
     font-weight: 700;
+    display: block;
   }
 `

@@ -1,87 +1,78 @@
 import styled from "styled-components";
-import { clr, deviceSize, fSize, pseudoElementCfg } from "../../globalStyle";
+import { clr, deviceSize, fFamily, fSize, pseudoElementCfg } from "../../globalStyle";
 
-export const Wrapper = styled.div `
+export const Wrapper = styled.div`
+  background-size: cover;
+
   display: flex;
   align-items: center;
+  justify-content: flex-end;
   flex-direction: column;
-  gap: 1rem;
+  height: 100%;
+  position: relative;
 
-  
-  @media screen and (min-width: ${deviceSize.tablet}){
-    flex-direction: row;
-    
-    &.reverse {
-      flex-direction: row-reverse;
-    }
+  -webkit-box-shadow: 0px 5px 10px 0px rgba(0,0,0,0.2);
+  -moz-box-shadow: 0px 5px 10px 0px rgba(0,0,0,0.2);
+  box-shadow: 0px 5px 10px 0px rgba(0,0,0,0.2);
+
+  &::after {
+    ${pseudoElementCfg}
+    width: 100%;
+    height: 100%;
+    background: -webkit-linear-gradient(bottom, #10141b, transparent);
+    background: -o-linear-gradient(bottom, #10141b, transparent);
+    background: linear-gradient(to top, #10141b, transparent);
+    -webkit-transition: all .5s;
+    -o-transition: all .5s;
+    transition: all .5s;
+    opacity: 0;
   }
 `
 
-export const Image = styled.img `
-  display: block;
-  width: 100%;
-  @media screen and (min-width: ${deviceSize.tablet}){
-    width: 50%;
-  }
-`
-
-export const Description = styled.div `
+export const Description = styled.div`
+  position: relative; 
   display: flex;
   flex-direction: column;
   align-items: center;
   gap: 1rem;
   width: 100%;
-  @media screen and (min-width: ${deviceSize.tablet}){
-    width: 50%;
-  } 
+
+  padding-left: 2rem;
+  padding-right: 2rem;
+  z-index: 1;
+  opacity: 0;
 `
 
-export const Title = styled.h2 `
-  font-weight: 700;
-  font-size: ${fSize.bodyLarge};
+export const Title = styled.h2`
+  color: ${clr.textLight};
   text-transform: uppercase;
-  display: flex;
-  align-items: center;
-  gap: 1rem;
+  font-weight: 500;
+  font-size: ${fSize.body};
 `
 
-export const Text = styled.p `
+export const Text = styled.p`
   font-size: ${fSize.body};
-  color: ${clr.textMainLight};
+  color: ${clr.textLight};
   text-align: center;
   padding-left: 1rem;
   padding-right: 1rem;
 `
 
-export const Features = styled.ul `
+export const Features = styled.ul`
   display: flex;
   align-items: center;
   justify-content: center;
   gap: 1rem;
   flex-wrap: wrap;
 
-  li {
-    color: ${clr.primary};
-    font-weight: 500;
-    position: relative;
-    
-    &:not(:last-child)
-    {
-      &::before {
-        ${pseudoElementCfg}
-        background-color: ${clr.textMainLight};
-        border-radius: 50%;
-        width: 5px;
-        height: 5px;
-        top: 6px;
-        right: -10px;
-      }
-    }
+  img {
+    width: 30px;
+    height: auto;
   }
   
 `
 
-export const Buttons = styled.div `
+export const Buttons = styled.div`
   display: flex;
   align-items: center;
   gap: .5rem;

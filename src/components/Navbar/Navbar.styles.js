@@ -4,17 +4,21 @@ import { clr, deviceSize, fSize, pseudoElementCfg, transition } from "../../glob
 export const Wrapper = styled.header`
   background-color: transparent;
 
-  position: fixed;
+  position: absolute;
   width: 100%;
   top: 0;
   left: 0;
   right: 0;
+  transition: transform 200ms ease-in-out; 
   
   &.header_scroll {
+    position: fixed;
+    top: -70px;
+    transform: translateY(70px);
     background-color: ${clr.bodyBg};
-    box-shadow: 0px 5px 20px -15px rgba(0,0,0,0.2);
-    -webkit-box-shadow: 0px 5px 20px -15px rgba(0,0,0,0.2);
-    -moz-box-shadow: 0px 5px 20px -15px rgba(0,0,0,0.2);
+    -webkit-box-shadow: 0px 10px 30px rgba(0, 0, 0, 0.05);
+    box-shadow: 0px 10px 30px rgba(0, 0, 0, 0.05);
+    -moz-box-shadow: 0px 10px 30px rgba(0, 0, 0, 0.05);
   }
 
   z-index: 999;
@@ -54,6 +58,8 @@ export const Nav = styled.nav`
   a {
     color: ${clr.text};
     padding: 0 1.5rem;
+    font-size: ${fSize.small};
+    text-transform: uppercase;
 
     &:hover,
     &.active {
@@ -69,7 +75,8 @@ export const Contact = styled.div`
   p {
     display: block;
     position: relative;
-
+    font-size: ${fSize.small};
+    text-transform: uppercase;
     &::before {
       ${pseudoElementCfg}
       background-color: ${clr.gray};
@@ -86,7 +93,6 @@ export const Contact = styled.div`
 
     li a {
       font-size: ${fSize.bodyLarge};
-
       &:hover {
         color: ${clr.primary};
       }

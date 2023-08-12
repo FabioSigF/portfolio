@@ -3,7 +3,7 @@ import { clr, pseudoElementCfg, transition } from "../../../globalStyle";
 
 export const Wrapper = styled.a`
   margin: 1rem 1.5rem;
-  color: ${clr.textMain};
+  color: ${props => props.btnlight ? clr.textLight : clr.textMain};
   font-weight: 600;
   position: relative;
   
@@ -17,7 +17,7 @@ export const Wrapper = styled.a`
       ${pseudoElementCfg}
       width: 0;
       height: 1px;
-      background-color: ${clr.textMain};
+      background-color: ${props => props.btnlight ? clr.textLight : clr.textMain};
       bottom: -3px;
       right: 0;
       transition: ${transition.normal};

@@ -19,8 +19,9 @@ export default function Navbar() {
   //If open menu, sidebar menu opens
   const [openMenu, setOpenMenu] = useState(false);
 
+  //Show menu desktop if scroll down
   function scrollPosition() {
-    if (window.scrollY > 10) {
+    if (window.scrollY > 400) {
       setChangeColor(true);
     }
     else {
@@ -56,6 +57,7 @@ export default function Navbar() {
     e.preventDefault()
     setOpenMenu(!openMenu);
   }
+
   return (
     <Wrapper className={changeColor ? "header_scroll" : ''}>
       <NavContainer>

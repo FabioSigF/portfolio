@@ -1,24 +1,24 @@
 import React from 'react'
-import { Buttons, Description, Features, Image, Text, Title, Wrapper } from './Project.styles'
+import { Buttons, Description, Features, Text, Title, Wrapper } from './Project.styles'
 import ButtonLink from '../Buttons/ButtonLink/ButtonLink'
 import { iconList } from '../../globalStyle'
 
-export default function Project({ image, title, description, features, githubLink, liveDemoLink, id, icon}) {
+export default function Project({ image, title, description, features, githubLink, liveDemoLink}) {
   
   return (
-    <Wrapper className={id % 2 === 0 && "reverse"}>
-      <Image src={image}/>
-      <Description>
-        <Title>{title}{icon}</Title>
-        <Text>{description}</Text>
+    <Wrapper style={{
+      backgroundImage: `url(${image})`
+    }} className='project'>
+      <Description className='project__description'>
+        <Title>{title}</Title>
         <Features>
           {features.map((item, key) => (
-            <li key={key}>{item}</li>
+            <img key={key} src={item} alt={title}/>
           ))}
         </Features>
         <Buttons>
-          <ButtonLink to={githubLink}>Code {iconList.github}</ButtonLink>
-          <ButtonLink to={liveDemoLink}>Live Demo {iconList.share}</ButtonLink>
+          <ButtonLink btnlight to={githubLink}>Code {iconList.github}</ButtonLink>
+          <ButtonLink btnlight to={liveDemoLink}>Live Demo {iconList.share}</ButtonLink>
         </Buttons>
       </Description>
     </Wrapper>
