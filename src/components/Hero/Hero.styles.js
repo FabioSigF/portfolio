@@ -130,7 +130,7 @@ export const Buttons = styled.div`
   margin-bottom: 1rem;
   
   @media screen and (min-width: ${deviceSize.mobileM}){
-    gap: 1rem;
+    gap: 2.5rem;
   }
 `
 

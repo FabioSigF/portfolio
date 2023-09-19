@@ -25,11 +25,14 @@ export default function About() {
               </SkillHeader>
               <ul>
                 <CheckItem label={"HTML"} />
-                <CheckItem label={"ReactJS"} />
                 <CheckItem label={"CSS"} />
-                <CheckItem label={"Sass"} />
                 <CheckItem label={"JavaScript"} />
+                <CheckItem label={"Typescript"} />
+                <CheckItem label={"ReactJS"} />
+                <CheckItem label={"Redux"} />
+                <CheckItem label={"Sass"} />
                 <CheckItem label={"Styled Comp"} />
+                <CheckItem label={"JEST"} />
                 <CheckItem label={"Git"} />
               </ul>
             </SkillCard>
@@ -42,7 +45,7 @@ export default function About() {
                 <CheckItem label={"MySQL"} />
                 <CheckItem label={"Firebase"} />
                 <CheckItem label={"JavaScript"} />
-                <CheckItem label={"MongoDB"} />
+                <CheckItem label={"NodeJS"} />
                 <CheckItem label={"Postman API"} />
                 <CheckItem label={"Express"} />
               </ul>
@@ -56,6 +59,8 @@ export default function About() {
                 <CheckItem fullWidth label={"Inglês"} />
                 <CheckItem fullWidth label={"Acessibilidade Web"} />
                 <CheckItem fullWidth label={"Arquitetura Mobile First"} />
+                <CheckItem fullWidth label={"Estruturas de Dados"} />
+                <CheckItem fullWidth label={"Programação Orientada a Objetos"} />
               </ul>
             </SkillCard>
           </SkillsList>

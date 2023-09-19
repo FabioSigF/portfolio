@@ -59,6 +59,7 @@ export const Nav = styled.nav`
     color: ${clr.text};
     padding: 0 1.5rem;
     font-size: ${fSize.small};
+    font-weight: 500;
     text-transform: uppercase;
 
     &:hover,
@@ -77,6 +78,7 @@ export const Contact = styled.div`
     position: relative;
     font-size: ${fSize.small};
     text-transform: uppercase;
+    font-weight: 500;
     &::before {
       ${pseudoElementCfg}
       background-color: ${clr.gray};

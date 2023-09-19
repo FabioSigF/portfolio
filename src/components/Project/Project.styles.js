@@ -1,83 +1,97 @@
 import styled from "styled-components";
-import { clr, deviceSize, fFamily, fSize, pseudoElementCfg } from "../../globalStyle";
+import { clr, fFamily, fSize, pseudoElementCfg } from "../../globalStyle";
 
 export const Wrapper = styled.div`
-  background-size: cover;
-
-  display: flex;
-  align-items: center;
-  justify-content: flex-end;
-  flex-direction: column;
+  background-size: 100%;
+  background-position: center;
   height: 100%;
   position: relative;
-
-  -webkit-box-shadow: 0px 5px 10px 0px rgba(0,0,0,0.2);
-  -moz-box-shadow: 0px 5px 10px 0px rgba(0,0,0,0.2);
-  box-shadow: 0px 5px 10px 0px rgba(0,0,0,0.2);
+  -webkit-transition: all 0.35s;
+  -o-transition: all 0.35s;
+  transition: all 0.35s;
 
   &::after {
     ${pseudoElementCfg}
     width: 100%;
     height: 100%;
-    background: -webkit-linear-gradient(bottom, #10141b, transparent);
-    background: -o-linear-gradient(bottom, #10141b, transparent);
-    background: linear-gradient(to top, #10141b, transparent);
-    -webkit-transition: all .5s;
-    -o-transition: all .5s;
-    transition: all .5s;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(15, 20, 30, 0.9);
+    -webkit-transition: all 0.35s;
+    -o-transition: all 0.35s;
+    transition: all 0.35s;
     opacity: 0;
   }
-`
+
+  &:hover {
+    &::after {
+      opacity: 1;
+    }
+
+    background-size: 105%;
+
+    .project__description {
+      color: ${clr.textLight};
+    }
+  }
+`;
 
 export const Description = styled.div`
-  position: relative; 
+  position: relative;
   display: flex;
   flex-direction: column;
-  align-items: center;
-  gap: 1rem;
+  align-items: flex-start;
+  gap: 2rem;
   width: 100%;
 
-  padding-left: 2rem;
-  padding-right: 2rem;
+  color: ${(props) => (props.textdark ? clr.textMain : clr.textLight)};
+
+  padding: 60px;
   z-index: 1;
-  opacity: 0;
-`
+`;
+
+export const Content = styled.div`
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 1rem;
+`;
+
+export const Date = styled.span`
+  opacity: 0.7;
+`;
 
 export const Title = styled.h2`
-  color: ${clr.textLight};
-  text-transform: uppercase;
-  font-weight: 500;
-  font-size: ${fSize.body};
-`
+  font-weight: 800;
+  font-size: ${fSize.titlesmall};
+  font-family: ${fFamily.text};
+`;
 
 export const Text = styled.p`
   font-size: ${fSize.body};
-  color: ${clr.textLight};
   text-align: center;
   padding-left: 1rem;
   padding-right: 1rem;
-`
+`;
 
 export const Features = styled.ul`
   display: flex;
   align-items: center;
-  justify-content: center;
   gap: 1rem;
   flex-wrap: wrap;
+  font-weight: 600;
 
-  img {
-    width: 30px;
-    height: auto;
+  li {
+    opacity: 0.7;
   }
-  
-`
+`;
 
 export const Buttons = styled.div`
   display: flex;
   align-items: center;
-  gap: .5rem;
+  flex-direction: row;
+  gap: 2rem;
 
-  @media screen and (min-width: ${deviceSize.mobileL}){
-    flex-direction: row;
-  }
-`
+`;

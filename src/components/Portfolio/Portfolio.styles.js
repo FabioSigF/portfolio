@@ -19,46 +19,14 @@ export const Projects = styled.div`
 `
 
 export const ProjectsList = styled.ul`
-  position: absolute;
-  height: 540px;
-  top: 0;
-  left: -35vw;
-  right: 0;
-  bottom: 0;
-  width: 150vw;
-
-  & .mySwiper {
-    height: 100%;
-  }
-
-  & .swiper-slide-active {
-    .project {
-      &::after {
-        opacity: 1;
-      }
-    }
-    .project__description {
-      opacity: 1;
-    }
-  }
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  align-items: center;
+  gap: 3rem;
 `
 
 export const ProjectsItem = styled.li`
+  min-height: 100vh;
+  max-height: 800px;
   height: 100%;
-  padding-top: 1rem;
-  padding-bottom: 1rem;
-
-  &:not(:last-child)
-  {
-    padding-bottom: 1rem;
-    border-bottom: 1px solid ${clr.gray};
-  }
-
-  @media screen and (min-width: ${deviceSize.tablet}){
-    &:not(:last-child)
-    {
-      padding-bottom: 0;
-      border-bottom: none;
-    }
-  }
 `
